@@ -1,0 +1,7 @@
+parameters:
+#    zlab_news.example.class: Zlab\NewsBundle\Example
+
+services:
+#    zlab_news.example:
+#        class: %zlab_news.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

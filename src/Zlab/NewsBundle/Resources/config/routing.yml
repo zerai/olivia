@@ -1,0 +1,3 @@
+zlab_news_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ZlabNewsBundle:Default:index }

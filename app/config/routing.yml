@@ -1,3 +1,7 @@
+zlab_frontend:
+    resource: "@ZlabFrontendBundle/Resources/config/routing.yml"
+    prefix:   /
+
 homepage:
     pattern: /homepage
 zlab_news:

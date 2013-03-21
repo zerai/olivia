@@ -34,7 +34,8 @@ class AppKernel extends Kernel
 
             new Zlab\NewsBundle\ZlabNewsBundle(),
             //new Zlab\UserBundle\ZlabUserBundle(),
-            new Application\Sonata\UserBundle\ApplicationSonataUserBundle()
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+            new Zlab\FrontendBundle\ZlabFrontendBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

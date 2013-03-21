@@ -1,0 +1,7 @@
+parameters:
+#    zlab_frontend.example.class: Zlab\FrontendBundle\Example
+
+services:
+#    zlab_frontend.example:
+#        class: %zlab_frontend.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

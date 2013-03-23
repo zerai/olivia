@@ -97,4 +97,9 @@ class Category
     {
         return $this->ebook;
     }
+
+    public function __toString()
+    {
+      return $this->getName();
+    }
 }

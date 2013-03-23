@@ -1,0 +1,30 @@
+Zlab\FrontendBundle\Entity\Ebook:
+  type: entity
+  table: ebook
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    type:
+      type: string
+      length: 255
+      nullable: true
+    title:
+      type: string
+      length: 255
+    author:
+      type: string
+      length: 255
+      nullable: true
+    is_activated:
+      type: boolean
+      nullable: true
+    created_at:
+      type: datetime
+    updated_at:
+      type: datetime
+      nullable: true
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]

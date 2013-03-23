@@ -23,7 +23,8 @@
         "sonata-project/doctrine-orm-admin-bundle": "*",
         "sonata-project/user-bundle": "*",
         "sonata-project/easy-extends-bundle" : "*",
-        "sonata-project/intl-bundle": "*"
+        "sonata-project/intl-bundle": "*",
+        "doctrine/doctrine-fixtures-bundle": "*"
     },
     "scripts": {
         "post-install-cmd": [

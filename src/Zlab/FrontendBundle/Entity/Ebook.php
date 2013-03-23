@@ -17,11 +17,6 @@ class Ebook
     /**
      * @var string
      */
-    private $type;
-
-    /**
-     * @var string
-     */
     private $title;
 
     /**
@@ -53,29 +48,6 @@ class Ebook
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set type
-     *
-     * @param string $type
-     * @return Ebook
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return string 
-     */
-    public function getType()
-    {
-        return $this->type;
     }
 
     /**
@@ -197,7 +169,10 @@ class Ebook
      */
     public function setCreatedAtValue()
     {
-        // Add your code here
+        if(!$this->getCreatedAt())
+          {
+            $this->created_at = new \DateTime();
+          }
     }
 
     /**
@@ -205,6 +180,6 @@ class Ebook
      */
     public function setUpdatedAtValue()
     {
-        // Add your code here
+        $this->updated_at = new \DateTime();
     }
 }

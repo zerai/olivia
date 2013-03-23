@@ -36,6 +36,8 @@ class AppKernel extends Kernel
             //new Zlab\UserBundle\ZlabUserBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new Zlab\FrontendBundle\ZlabFrontendBundle(),
+
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -6,17 +6,13 @@ Zlab\FrontendBundle\Entity\Ebook:
       type: integer
       generator: { strategy: AUTO }
   fields:
-    type:
-      type: string
-      length: 255
-      nullable: true
     title:
       type: string
       length: 255
     author:
       type: string
       length: 255
-      nullable: true
+      nullable: false
     is_activated:
       type: boolean
       nullable: true

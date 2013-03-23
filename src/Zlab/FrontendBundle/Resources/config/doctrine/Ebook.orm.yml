@@ -21,6 +21,14 @@ Zlab\FrontendBundle\Entity\Ebook:
     updated_at:
       type: datetime
       nullable: true
+  manyToOne:
+    category:
+      targetEntity: Category
+      inversedBy: jobs
+      joinColumn:
+        name: category_id
+        nullable: false
+        referencedColumnName: id
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue ]
     preUpdate: [ setUpdatedAtValue ]

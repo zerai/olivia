@@ -47,32 +47,43 @@ class LoadEbookData extends AbstractFixture implements OrderedFixtureInterface
     		'Pippo gianni',
     		'Marco Rossi',
     	);
-  	for ($i=0; $i < 20; $i++) { 
+    
+    $category_reference = array(
+        'category-design',
+        'category-programming',
+        'category-webprogramming',
+        'category-sql',
+        'category-administrator',
+        );
+
+  	
+
+
+    for ($i=0; $i < 20; $i++) { 
 	    $ebook = new Ebook();
 	    $ebook->setTitle($title[array_rand($title)]);
-	    $ebook->setAuthor($author[array_rand($author)]);
+	    $ebook->setCategory($em->merge($this->getReference($category_reference[array_rand($category_reference)])));
+        $ebook->setAuthor($author[array_rand($author)]);
 	    $ebook->setIsActivated(1);
 	 
 	    $em->persist($ebook);
   	}
+    
+
     $ebook1 = new Ebook();
-    $ebook1->setTitle('Design');
-    $ebook1->setAuthor('pippo');
+    $ebook1->setTitle('Come evadere il fisco e dormire sonni tranquilli');
+    $ebook1->setCategory($em->merge($this->getReference($category_reference[array_rand($category_reference)])));
+    $ebook1->setAuthor('Tremonti Giulio');
     $ebook1->setIsActivated(1);
  
     $em->persist($ebook1);
  
     $em->flush();
- 		/*
-    $this->addReference('category-design', $design);
-    $this->addReference('category-programming', $programming);
-    $this->addReference('category-manager', $manager);
-    $this->addReference('category-administrator', $administrator);
-    */
+
   }
  
   public function getOrder()
   {
-    return 1; // the order in which fixtures will be loaded
+    return 2; // the order in which fixtures will be loaded
   }
 }

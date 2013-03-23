@@ -39,6 +39,11 @@ class Ebook
      */
     private $updated_at;
 
+    /**
+     * @var \Zlab\FrontendBundle\Entity\Category
+     */
+    private $category;
+
 
     /**
      * Get id
@@ -164,15 +169,37 @@ class Ebook
     {
         return $this->updated_at;
     }
+
+    /**
+     * Set category
+     *
+     * @param \Zlab\FrontendBundle\Entity\Category $category
+     * @return Ebook
+     */
+    public function setCategory(\Zlab\FrontendBundle\Entity\Category $category)
+    {
+        $this->category = $category;
+    
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Zlab\FrontendBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
     /**
      * @ORM\PrePersist
      */
     public function setCreatedAtValue()
     {
-        if(!$this->getCreatedAt())
-          {
-            $this->created_at = new \DateTime();
-          }
+        if (!$this->getCreatedAt()) {
+            $this->setCreatedAt(new \DateTime());
+        }
     }
 
     /**
@@ -180,6 +207,6 @@ class Ebook
      */
     public function setUpdatedAtValue()
     {
-        $this->updated_at = new \DateTime();
+        $this->created_at = new \DateTime();
     }
 }

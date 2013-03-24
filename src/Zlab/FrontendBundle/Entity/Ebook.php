@@ -197,9 +197,10 @@ class Ebook
      */
     public function setCreatedAtValue()
     {
-        if (!$this->getCreatedAt()) {
-            $this->setCreatedAt(new \DateTime());
-        }
+          if(!$this->getCreatedAt())
+          {
+            $this->created_at = new \DateTime();
+          }        
     }
 
     /**
@@ -207,6 +208,6 @@ class Ebook
      */
     public function setUpdatedAtValue()
     {
-        $this->created_at = new \DateTime();
+        $this->updated_at = new \DateTime();
     }
 }

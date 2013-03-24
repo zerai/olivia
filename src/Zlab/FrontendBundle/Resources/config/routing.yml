@@ -7,3 +7,7 @@ R_ZlabFrontendBundle_homepage:
     defaults: { _controller: ZlabFrontendBundle:Page:index }
     requirements:
         _method:  GET
+R_ZlabFrontendBundle_Ebook:
+        resource: "@ZlabFrontendBundle/Resources/config/routing/ebook.yml"
+        prefix:   /ebook
+

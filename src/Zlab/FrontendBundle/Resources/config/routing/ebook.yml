@@ -1,0 +1,30 @@
+R_Ebook:
+    pattern:  /
+    defaults: { _controller: "ZlabFrontendBundle:Ebook:index" }
+
+R_Ebook_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ZlabFrontendBundle:Ebook:show" }
+
+R_Ebook_new:
+    pattern:  /new
+    defaults: { _controller: "ZlabFrontendBundle:Ebook:new" }
+
+R_Ebook_create:
+    pattern:  /create
+    defaults: { _controller: "ZlabFrontendBundle:Ebook:create" }
+    requirements: { _method: post }
+
+R_Ebook_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ZlabFrontendBundle:Ebook:edit" }
+
+R_Ebook_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ZlabFrontendBundle:Ebook:update" }
+    requirements: { _method: post }
+
+R_Ebook_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ZlabFrontendBundle:Ebook:delete" }
+    requirements: { _method: post }
